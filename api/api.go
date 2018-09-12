@@ -20,7 +20,7 @@ type api struct {
 }
 
 const (
-	apiUrl = "https://dev.hyperchain.cn/v1"
+	apiUrl = "https://api.hyperchain.cn/v1"
 )
 
 var client = &http.Client{
