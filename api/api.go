@@ -20,7 +20,7 @@ type api struct {
 }
 
 const (
-	apiUrl = "https://api.hyperchain.cn/v1"
+	apiUrl = "https://dev.hyperchain.cn/v1"
 )
 
 var client = &http.Client{
@@ -30,6 +30,20 @@ var client = &http.Client{
 // New - Create new api
 func New(_phone, _password string, _apiKey, _apiSecret string) *api {
 	return &api{phone: _phone, password: _password, apiKey: _apiKey, apiSecret: _apiSecret}
+}
+
+// Set - Set api value
+func (a *api) SetPhone(_phone string) {
+	a.phone = _phone
+}
+func (a *api) SetPassword(_password string) {
+	a.password = _password
+}
+func (a *api) SetApiKey(_apiKey string) {
+	a.apiKey = _apiKey
+}
+func (a *api) SetApiSecret(_apiSecret string) {
+	a.apiSecret = _apiSecret
 }
 
 // CheckAccessToken -  Check access token
