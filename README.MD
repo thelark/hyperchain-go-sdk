@@ -213,3 +213,10 @@ if err != nil {
 jb, _ := json.Marshal(resp)
 ```
 ##### cmd/main.go 仅供参考
+
+###### 编译 cmd/main.go
+```shell
+bazel build //:gazelle
+bazel run //:gazelle -- update-repos -from_file=go.mod
+bazel build //cmd:hyperchain-cli
+```

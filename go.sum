@@ -1,0 +1,4 @@
+github.com/thelark/hyperchain-go-sdk v0.0.0-20181012070158-0dab4623a1a0 h1:zTkzLOIgur8PADbFcsun8aKhUnCUwoLK5cj2N/NkgM0=
+github.com/thelark/hyperchain-go-sdk v0.0.0-20181012070158-0dab4623a1a0/go.mod h1:ur+LxAJz55M4NIfGDN35LlgwBe6eNiBSn3yQ16GzWYE=
+gopkg.in/urfave/cli.v2 v2.0.0-20180128182452-d3ae77c26ac8 h1:Ggy3mWN4l3PUFPfSG0YB3n5fVYggzysUmiUQ89SnX6Y=
+gopkg.in/urfave/cli.v2 v2.0.0-20180128182452-d3ae77c26ac8/go.mod h1:cKXr3E0k4aosgycml1b5z33BVV6hai1Kh7uDgFOkbcs=
