@@ -12,13 +12,13 @@ import (
 
 func main() {
 	api := api.New("", "", "", "")
-	getApiTokenCmd := &cli.Command{
+	getAPITokenCmd := &cli.Command{
 		Name:    "getApiToken",
 		Aliases: []string{},
 		Usage:   "获取指定用户的API接入授权码",
 		Flags:   []cli.Flag{},
 		Action: func(ctx *cli.Context) error {
-			resp, err := api.GetApiToken()
+			resp, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -30,17 +30,17 @@ func main() {
 			return nil
 		},
 	}
-	refreshApiTokenCmd := &cli.Command{
+	refreshAPITokenCmd := &cli.Command{
 		Name:    "refreshApiToken",
 		Aliases: []string{},
 		Usage:   "刷新API授权码",
 		Flags:   []cli.Flag{},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
-			resp, err := api.RefreshApiToken()
+			resp, err := api.RefreshAPIToken()
 			if err != nil {
 				return err
 			}
@@ -58,7 +58,7 @@ func main() {
 		Usage:   "新建区块链账户,返回区块链地址",
 		Flags:   []cli.Flag{},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -93,7 +93,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -128,7 +128,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -163,7 +163,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -192,7 +192,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -227,7 +227,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -262,7 +262,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -303,7 +303,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -350,7 +350,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -397,7 +397,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -444,7 +444,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -473,7 +473,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -495,7 +495,7 @@ func main() {
 		Usage:   "查询联盟链上的交易总数",
 		Flags:   []cli.Flag{},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -524,7 +524,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -553,7 +553,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -588,7 +588,7 @@ func main() {
 			},
 		},
 		Action: func(ctx *cli.Context) error {
-			_, err := api.GetApiToken()
+			_, err := api.GetAPIToken()
 			if err != nil {
 				return err
 			}
@@ -636,8 +636,8 @@ func main() {
 			},
 		},
 		Commands: []*cli.Command{
-			getApiTokenCmd,
-			refreshApiTokenCmd,
+			getAPITokenCmd,
+			refreshAPITokenCmd,
 			createAccountCmd,
 			queryBlockCmd,
 			queryBlocksCmd,
@@ -658,8 +658,8 @@ func main() {
 		Before: func(ctx *cli.Context) error {
 			api.SetPhone(ctx.String("phone"))
 			api.SetPassword(ctx.String("password"))
-			api.SetApiKey(ctx.String("apiKey"))
-			api.SetApiSecret(ctx.String("apiSecret"))
+			api.SetAPIKey(ctx.String("apiKey"))
+			api.SetAPISecret(ctx.String("apiSecret"))
 			return nil
 		},
 	}
